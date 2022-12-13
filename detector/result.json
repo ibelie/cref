@@ -1,0 +1,51 @@
+{
+    "all": [
+        [],
+        [],
+        [],
+        [],
+        []
+    ],
+    "couple_reference": [
+        [],
+        [],
+        [],
+        [],
+        []
+    ],
+    "couple_with_container": [
+        [],
+        [],
+        [],
+        [],
+        []
+    ],
+    "couple_with_method": [
+        [],
+        [],
+        [],
+        [],
+        []
+    ],
+    "instance_method": [
+        [],
+        [],
+        [],
+        [],
+        []
+    ],
+    "self_reference": [
+        [],
+        [],
+        [],
+        [],
+        []
+    ],
+    "self_with_container": [
+        [],
+        [],
+        [],
+        [],
+        []
+    ]
+}

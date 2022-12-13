@@ -1,0 +1,23 @@
+# Copyright 2018 ibelie, Chen Jie, Joungtao. All rights reserved.
+# Use of this source code is governed by The MIT License
+# that can be found in the LICENSE file.
+
+# This is the default docker image of Travis CI, and also for go, jvm, node_js, php, python, ruby
+FROM travisci/ci-garnet:packer-1515445631-7dfb2e1
+
+# User for Travis CI
+USER travis
+
+RUN bash -lc "rvm use 2.3.4 --default"
+
+# Build travis-build
+RUN mkdir -p /home/travis/.travis
+RUN git clone https://github.com/travis-ci/travis-build.git /home/travis/.travis/travis-build
+
+WORKDIR /home/travis/.travis/travis-build
+
+RUN bash -lc "bundle install"
+RUN bash -lc "bundler add travis"
+RUN bash -lc "bundler binstubs travis"
+
+RUN echo "#!/bin/bash\n/home/travis/.travis/travis-build/bin/travis compile \$*" > /home/travis/travis_compile && chmod +x /home/travis/travis_compile

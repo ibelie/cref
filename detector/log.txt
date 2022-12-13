@@ -1,0 +1,30 @@
+lazy loading: ./result/test.py
+	type: <ModuleType of __builtin__>
+	type: <ModuleType of __main__>
+	type: <ModuleType of math>
+	type: <ModuleType of re>
+	type: <ModuleType of test>
+___________
+	kind: 5
+	name: A
+	node: <ClassDef 'class A(object): \n    pass' from './result/test.py' [1:0 - 2:8]>
+___________
+	type: <ClassType of A <ClassDef 'class A(object): \n    pass' from './result/test.py' [1:0 - 2:8]>>
+___________
+	kind: 5
+	name: test1
+	node: <FunctionDef 'def test1(x):\n    if x:\n        a = A()\n    else:\n        a = 1' from './result/test.py' [4:0 - 8:13]>
+___________
+	type: <FunctionType of test1 <FunctionDef 'def test1(x):\n    if x:\n        a = A()\n    else:\n        a = 1' from './result/test.py' [4:0 - 8:13]>>
+___________
+	kind: 4
+	name: x
+	node: <arg 'x' from './result/test.py' [4:10 - 4:11]>
+___________
+	type: <BooleanType of False>
+___________
+	kind: 4
+	name: a
+	node: <Name 'a' from './result/test.py' [8:8 - 8:9]>
+___________
+	type: <IntegerType of 1>
